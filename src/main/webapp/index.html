@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>Home</title>
+  </head>
+  <body class="lift:content_id=main">
+    <div id="main" class="lift:surround?with=default;at=content">
+      <h2>Parameterized Snippet</h2>
+      <p>
+        <span class="lift:helloWorld.howdy">
+          Welcome to your Lift app at <span id="time">Time goes here</span>
+        </span>
+      </p>
+
+      <p>
+        <ul>
+          <li><a href="/venue/123">/venue/123</a></li>
+          <li><a href="/venue/123/photos">/venue/123/photos</a></li>
+          <li>
+            <a href="/user/1/checkin/123">/user/1/checkin/123</a><br />
+            The user-id 1 has been registred in Boot.scala.
+          </li>
+        </ul>
+      </p>
+
+    </div>
+  </body>
+</html>
