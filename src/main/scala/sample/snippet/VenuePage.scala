@@ -3,6 +3,7 @@ package sample.snippet
 import _root_.net.liftweb.util._
 import _root_.net.liftweb.common._
 import _root_.net.liftweb.sitemap._
+import _root_.net.liftweb.sitemap.Loc._
 import Helpers._
 
 /* I'm too lazy to define the following model. ;-( */
@@ -18,6 +19,7 @@ case class VenuePageData(venue: Venue) extends PageData
 object VenuePage extends ItemRewriteLoc[Venue, VenuePageData] {
   override val name = "venue"
   override val pathPrefix = "venue" :: Nil
+  override def link = new Link(pathPrefix ++ List("index"))
   override def getItem(id: String) = Venue.find(id)
   override def wrapItem(venueBox: Box[Venue]) = venueBox.map(VenuePageData(_))
   override def canonicalUrl(data: VenuePageData) = {
